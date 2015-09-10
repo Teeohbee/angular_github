@@ -2,7 +2,7 @@ githubUserSearch.factory('Search', ['$http', function($http) {
 
   var queryUrl = 'https://api.github.com/search/users';
 
-  var accessToken = $http({method: 'GET', url: '/key'});
+  var accessToken = $http( {method: 'GET', url: '/key'} );
   accessToken.then(function(success) {
     self.token = success.data;
   });
